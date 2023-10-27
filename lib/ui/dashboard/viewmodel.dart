@@ -93,7 +93,9 @@ class DashboardViewModel extends BaseViewModel<DashboardInteractor>{
 
   void selectMenu(Menu menu){
     selectedMenu = menu;
-    selectSubBreed(0);
+    if (menu == Menu.bySubBreed && _subBreed.isEmpty) {
+      selectSubBreed(0);
+    }
   }
 
   void selectSubBreed(int index){
