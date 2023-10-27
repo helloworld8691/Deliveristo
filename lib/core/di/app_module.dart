@@ -1,5 +1,4 @@
 import 'package:deliveristo/core/data/network/api_helper.dart';
-import 'package:deliveristo/core/di/injection.dart';
 import 'package:deliveristo/core/routers/route.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';

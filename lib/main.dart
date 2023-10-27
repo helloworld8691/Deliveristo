@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'constant/theme.dart';
 import 'core/di/app_module.dart';
 import 'core/di/injection.dart';
-import 'package:device_preview/device_preview.dart';
+//import 'package:device_preview/device_preview.dart';  // uncomment this one if you want to check app in different phone size
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
