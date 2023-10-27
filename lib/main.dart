@@ -1,32 +1,35 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'constant/theme.dart';
 import 'core/di/app_module.dart';
 import 'core/di/injection.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await configureInjection();
 
-  runApp(MyApp());
+  runApp(
+      MyApp()
+      // uncomment this one if you want to check app in different phone size
+      /*DevicePreview(
+          enabled: !kReleaseMode,
+          builder: (context) => MyApp()
+      )*/
+  );
 }
 
 class MyApp extends StatelessWidget {
   MyApp({super.key}){
     EasyLoading.instance
       ..displayDuration = const Duration(milliseconds: 2000)
-      ..loadingStyle = EasyLoadingStyle.custom
-      ..indicatorSize = 40
-      ..textColor = Colors.black
-      ..radius = 10
-      ..backgroundColor = Colors.transparent
-      ..maskColor = Colors.white
-      ..indicatorColor = Colors.white54
-      ..userInteractions = false
-      ..dismissOnTap = false
-      ..boxShadow = <BoxShadow>[]
-      ..indicatorType = EasyLoadingIndicatorType.ring
+      ..loadingStyle = EasyLoadingStyle.dark
+      ..indicatorType = EasyLoadingIndicatorType.circle
+      ..indicatorSize = 35.0
+      ..radius = 5.0
+
       ..userInteractions = false;
   }
 
