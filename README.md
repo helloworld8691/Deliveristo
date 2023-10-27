@@ -26,3 +26,5 @@
 - device_preview(https://pub.dev/packages/device_preview)
 
   With this library, we can test app UI in different screen size
+  
+  To test app UI in different screen size, please read the commented lines in main.dart

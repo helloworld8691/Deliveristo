@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,7 +11,7 @@ void main() async{
   await configureInjection();
 
   runApp(
-      MyApp()
+      MyApp() // make this line as comment to check app in different phone size
       // uncomment this one if you want to check app in different phone size
       /*DevicePreview(
           enabled: !kReleaseMode,

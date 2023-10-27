@@ -12,7 +12,7 @@ extension StringExt on String {
         child: SizedBox(
             width: 20, height: 20,
             child: CircularProgressIndicator(strokeWidth: 2,)),
-      ) : SizedBox(),
+      ) : const SizedBox(),
       errorWidget: (context, url, error) =>  Image(image: const AssetImage("assets/image/default_img.jpg"), width: width, height: height, fit: isFitCover ? BoxFit.cover : BoxFit.none),
     ),
   );
